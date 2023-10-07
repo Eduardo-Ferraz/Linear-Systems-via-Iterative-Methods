@@ -8,13 +8,14 @@
 %%
 %% Output: sequencia de aproximaccoes (de vetores) partindo do vetor todo nulo
 %%
-function [x] = JacobiNumIter( A, b, Numiter );
+function [x] = JacobiNumIter(A,b, Numiter );
   %clc;
 	printf('\n \n Fazendo  %d iteracoes do metodo de Gauss JACOBI para obter a solucao de Ax=b \n', Numiter);
 	row = size(A,1);
   n=row;
 	% vetor chute inicial
   xold=zeros(n,1);
+  x=zeros(n,1);
 
   for k = 1:Numiter
 		for i = 1:n
